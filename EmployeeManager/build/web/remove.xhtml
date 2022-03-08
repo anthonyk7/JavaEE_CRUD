@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">    
+
+    <h:head>
+        <title>Facelet Title</title>
+        <link type = "text/css" rel = "stylesheet"  
+              href = "resource/css/stylesheet.css" />     </h:head>
+    <h:body>
+        <h2><center>DELETE EMPLOYEE</center></h2>
+        <div id="nav">
+            <a href="http://localhost:8080/EmployeeManager/faces/create.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">
+                CREATE</a>
+            <a href="http://localhost:8080/EmployeeManager/faces/index.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">
+                SHOW ALL</a>
+            <a href="http://localhost:8080/EmployeeManager/faces/remove.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">DELETE</a>
+            <a href="http://localhost:8080/EmployeeManager/faces/update.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">UPDATE</a>
+        </div>
+        <h:form>
+            <h:panelGrid style="margin: auto; border: 2px black solid; background-color: orange;">
+                <h:outputText value="EMPLOYEE ID"/>
+                <h:inputText value="#{employeeBean.id}"/>
+                <h:commandButton value="DELTE NOW!" 
+                                 action="#{employeeBean.deleteController()}"/>
+            </h:panelGrid>
+        </h:form>    </h:body>
+</html>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <link type = "text/css" rel = "stylesheet"  
+              href = "resource/css/stylesheet.css" />     </h:head>
+    <h:body>
+        <h2><center>CREATE EMPLOYEES</center></h2>
+        <div id="nav">
+            <a href="http://localhost:8080/EmployeeManager/faces/create.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">
+                CREATE</a>
+            <a href="http://localhost:8080/EmployeeManager/faces/index.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">
+                SHOW ALL</a>
+            <a href="http://localhost:8080/EmployeeManager/faces/remove.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">DELETE</a>
+            <a href="http://localhost:8080/EmployeeManager/faces/update.xhtml" style="text-decoration: none; margin-left: 1.0em;padding: 0 1em 1em 0;">UPDATE</a>
+        </div>
+        <h:form>
+            <h:panelGrid style="margin: auto; border: black 2px solid; background-color: grey;">
+
+                <h:outputLabel value="FIRST NAME"/>
+                <h:inputText value="#{employeeBean.firstName}" required="true"
+                             requiredMessage="YOU MUST ENTER EMPLOYEE FIRST NAME"/>
+
+                <h:outputLabel value="LAST NAME"/>
+                <h:inputText value="#{employeeBean.lastName}" required="true"
+                             requiredMessage="YOU MUST ENTER EMPLOYEE LAST NAME"/>
+
+                <h:outputLabel value="SALARY"/>
+                <h:inputText value="#{employeeBean.salary}" required="true" 
+                             requiredMessage="YOU MUST ENTER EMPLOYEE SALARY"/>
+
+                <h:commandButton value="REGISTER" action="#{employeeBean.addController()}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
